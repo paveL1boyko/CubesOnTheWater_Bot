@@ -101,7 +101,7 @@ class Tapper:
 
     async def login(self, http_client: aiohttp.ClientSession, init_data: str):
         try:
-            async with http_client.post(url='https://server.questioncube.xyz/auth',
+            async with http_client.post(url='https://server.cubeslabs.xyz/auth',
                                         json={'initData': init_data, 'ref': None}) as response:
                 response_text = await response.text()
                 app_user_data = json.loads(response_text)
@@ -112,11 +112,11 @@ class Tapper:
 
     async def get_tg_x(self, http_client: aiohttp.ClientSession, token: str):
         try:
-            async with http_client.post(url='https://server.questioncube.xyz/auth/trustmebro',
+            async with http_client.post(url='https://server.cubeslabs.xyz/auth/trustmebro',
                                         json={'token': token, 'type': 'telegram'}) as response:
                 response_text = await response.text()
                 if response.status == 200:
-                    async with http_client.post(url='https://server.questioncube.xyz/auth/trustmebro',
+                    async with http_client.post(url='https://server.cubeslabs.xyz/auth/trustmebro',
                                                 json={'token': token, 'type': 'twitter'}) as response1:
                         response_text = await response1.text()
                         if response1.status == 200:
@@ -127,7 +127,7 @@ class Tapper:
 
     async def join_to_pool(self, http_client: aiohttp.ClientSession, token: str):
         try:
-            async with http_client.post(url='https://server.questioncube.xyz/pools/542/join',
+            async with http_client.post(url='https://server.cubeslabs.xyz/pools/542/join',
                                         json={'token': token}) as response:
                 response_text = await response.text()
         except Exception as error:
@@ -135,7 +135,7 @@ class Tapper:
 
     async def mine(self, http_client: aiohttp.ClientSession, token: str):
         try:
-            async with http_client.post(url='https://server.questioncube.xyz/game/mined',
+            async with http_client.post(url='https://server.cubeslabs.xyz/game/mined',
                                         json={'token': token}) as response:
                 response_text = await response.text()
                 if response.status == 200:
@@ -155,7 +155,7 @@ class Tapper:
 
     async def boost_pool(self, http_client: aiohttp.ClientSession, token: str, amount: int):
         try:
-            async with http_client.post(url='https://server.questioncube.xyz/pools/boost',
+            async with http_client.post(url='https://server.cubeslabs.xyz/pools/boost',
                                         json={'amount': amount, 'token': token}) as response:
                 response_text = await response.text()
                 if response.status == 200:
@@ -167,7 +167,7 @@ class Tapper:
 
     async def claim_boxes(self, http_client: aiohttp.ClientSession, token: str):
         try:
-            async with http_client.post(url='https://server.questioncube.xyz/pools/claim',
+            async with http_client.post(url='https://server.cubeslabs.xyz/pools/claim',
                                         json={'token': token}) as response:
                 response_text = await response.text()
                 data = json.loads(response_text)
