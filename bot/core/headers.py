@@ -4,7 +4,7 @@ headers = {
     "Sec-Ch-Ua": '"Chromium";v="129", "Not=A?Brand";v="8"',
     "Content-Type": "application/json",
     "Sec-Ch-Ua-Mobile": "?1",
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25",
+    "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.6668.71 Mobile Safari/537.36",
     "Accept": "*/*",
     "Origin": "https://play.cubeslabs.xyz",
     "Sec-Fetch-Site": "same-site",
